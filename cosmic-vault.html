@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cosmic Knowledge Vault</title>
+
+<style>
+body {
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:black;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* 🌌 Animated Stars */
+.stars {
+    width:100%;
+    height:100vh;
+    background:transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+    position:fixed;
+    z-index:-1;
+    animation:moveStars 120s linear infinite;
+}
+
+@keyframes moveStars {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.container {
+    padding:40px;
+}
+
+h1 {
+    color:#00f7ff;
+    text-align:center;
+    text-shadow:0 0 10px #00f7ff;
+}
+
+input, textarea {
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    background:#111;
+    color:white;
+    border:1px solid #00f7ff;
+    border-radius:5px;
+}
+
+button {
+    padding:10px 20px;
+    background:#00f7ff;
+    border:none;
+    cursor:pointer;
+    border-radius:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover {
+    background:#00c3cc;
+    box-shadow:0 0 15px #00f7ff;
+}
+
+.card {
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    margin:20px 0;
+    border-radius:15px;
+    transition:0.4s;
+    border:1px solid rgba(0,247,255,0.3);
+}
+
+.card:hover {
+    transform:translateY(-8px);
+    box-shadow:0 0 20px #00f7ff;
+}
+
+a {
+    color:#00f7ff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="container">
+
+<h1>🌌 Cosmic Knowledge Vault</h1>
+
+<h3>Add New Discovery</h3>
+
+<input type="text" id="title" placeholder="Book / Topic Title">
+<input type="text" id="category" placeholder="Category (Black Holes / VLSI / IoT)">
+<textarea id="summary" placeholder="What did you learn from this?"></textarea>
+<input type="text" id="pdf" placeholder="PDF Link (optional)">
+<button onclick="addBook()">Add To Vault</button>
+
+<hr>
+
+<h3>Stored Discoveries</h3>
+<div id="bookList"></div>
+
+</div>
+
+<script>
+
+let books = JSON.parse(localStorage.getItem("books")) || [];
+
+function saveBooks() {
+    localStorage.setItem("books", JSON.stringify(books));
+}
+
+function addBook() {
+    const book = {
+        title: document.getElementById("title").value,
+        category: document.getElementById("category").value,
+        summary: document.getElementById("summary").value,
+        pdf: document.getElementById("pdf").value
+    };
+
+    books.push(book);
+    saveBooks();
+    displayBooks();
+}
+
+function displayBooks() {
+    const container = document.getElementById("bookList");
+    container.innerHTML = "";
+
+    books.forEach((book) => {
+        container.innerHTML += `
+        <div class="card">
+            <h3>${book.title}</h3>
+            <p><b>Category:</b> ${book.category}</p>
+            <p>${book.summary}</p>
+            ${book.pdf ? `<a href="${book.pdf}" target="_blank">Open PDF</a>` : ""}
+        </div>
+        `;
+    });
+}
+
+displayBooks();
+
+</script>
+
+</body>
+</html>
