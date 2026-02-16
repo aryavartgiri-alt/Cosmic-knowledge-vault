@@ -2,30 +2,64 @@
 <html>
 <head>
 <title>Cosmic Knowledge Vault</title>
+
 <style>
 body {
-  background: black;
-  color: cyan;
+  margin: 0;
   font-family: Arial;
-  padding: 20px;
+  color: cyan;
+  background: black;
+  overflow-x: hidden;
 }
-input, textarea, select {
+
+/* 🌌 Animated Stars */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveStars 60s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes moveStars {
+  from { transform: translate(0,0); }
+  to { transform: translate(-500px,-500px); }
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input, textarea {
   width: 100%;
   margin: 8px 0;
-  padding: 8px;
+  padding: 10px;
+  background: #111;
+  border: 1px solid cyan;
+  color: cyan;
 }
+
 button {
   padding: 10px;
   background: cyan;
   border: none;
   cursor: pointer;
+  font-weight: bold;
 }
+
 .card {
   border: 1px solid cyan;
   padding: 10px;
   margin-top: 10px;
+  background: rgba(0,0,0,0.6);
 }
 </style>
+
+
 </head>
 <body>
 
@@ -89,3 +123,4 @@ displayData();
 
 </body>
 </html>
+
