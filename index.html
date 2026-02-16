@@ -121,12 +121,10 @@ function displayData() {
 displayData();
 </script>
 <script type="module">
-  // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  import { getFirestore, collection, addDoc } 
+  from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
 
-  // Your web app's Firebase configuration
   const firebaseConfig = {
     apiKey: "AIzaSyCVbEzFIE_fraxifo2Y-0_jsyJYCeZW_VQ",
     authDomain: "cosmic-knowledge-vault.firebaseapp.com",
@@ -136,10 +134,29 @@ displayData();
     appId: "1:89339424882:web:11acfb7b0ebcff482a92eb"
   };
 
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  async function testConnection() {
+    try {
+      await addDoc(collection(db, "test"), {
+        message: "Firebase connected successfully 🚀",
+        time: new Date()
+      });
+
+      document.body.innerHTML += 
+        "<h2 style='color:green'>✅ Firestore Connected!</h2>";
+
+    } catch (error) {
+      document.body.innerHTML += 
+        "<h2 style='color:red'>❌ Firestore Connection Failed</h2>";
+    }
+  }
+
+  testConnection();
 </script>
 </body>
 </html>
+
 
 
