@@ -119,6 +119,27 @@ footer a {
 footer a:hover {
     color: white;
 }
+    .pdf-list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pdf-list a {
+    background: #00c6ff;
+    color: black;
+    padding: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.pdf-list a:hover {
+    background: white;
+    transform: scale(1.05);
+}
 </style>
 </head>
 
@@ -143,26 +164,29 @@ footer a:hover {
     <p>Welcome to my Science & Technology Education Hub</p>
 
 
-    <h2>📚 PDF Library</h2>
     <div class="pdf-card">
     <h3>Electronic Note</h3>
-    <button onclick="openModal()" 
-        style="padding:10px 20px; background:#00c6ff; border:none; border-radius:5px; cursor:pointer;">
-        View PDFs
-    </button>
-</div>
+
+    <div class="pdf-list">
+        <a href="pdfs/electronics/analog.pdf" target="_blank">📘 Analog Electronics</a>
+        <a href="pdfs/electronics/digital.pdf" target="_blank">📗 Digital Electronics</a>
+    </div>
+    </div>
         <div class="pdf-card">
-    <h3> Science/Space Idea</h3>
-    <button onclick="openModal()" 
-        style="padding:10px 20px; background:#00c6ff; border:none; border-radius:5px; cursor:pointer;">
-        View PDFs
-    </button>
+    <h3>Science / Space Idea</h3>
+
+    <div class="pdf-list">
+        <a href="pdfs/science/galaxy.pdf" target="_blank">🌌 Galaxy Formation</a>
+        <a href="pdfs/science/wormhole.pdf" target="_blank">🌀 Wormhole Theory</a>
+    </div>
 </div>
+    <div class="pdf-card">
     <h3>Historical Idea</h3>
-    <button onclick="openModal()" 
-        style="padding:10px 20px; background:#00c6ff; border:none; border-radius:5px; cursor:pointer;">
-        View PDFs
-    </button>
+
+    <div class="pdf-list">
+        <a href="pdfs/historical/idea1.pdf" target="_blank">📜 Ancient Theory</a>
+        <a href="pdfs/historical/idea2.pdf" target="_blank">📜 Classical Science</a>
+    </div>
 </div>
 
 <!-- About -->
