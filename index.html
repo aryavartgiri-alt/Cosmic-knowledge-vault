@@ -144,24 +144,26 @@ footer a:hover {
 
 
     <h2>📚 PDF Library</h2>
-    <div class="pdf-container">
+    <div class="pdf-card">
+    <h3>Electronic Note</h3>
+    <button onclick="openModal()" 
+        style="padding:10px 20px; background:#00c6ff; border:none; border-radius:5px; cursor:pointer;">
+        View PDFs
+    </button>
+</div>
         <div class="pdf-card">
-            <h3>Electronics Notes</h3>
-            <a href="pdfs/electronics.pdf" target="_blank">Open PDF</a>
-        </div>
-
-        <div class="pdf-card">
-            <h3>Science/Space Note</h3>
-            <a href="pdfs/physics.pdf" target="_blank">Open PDF</a>
-        </div>
-
-        <div class="pdf-card">
-            <h3>Historical Ideas</h3>
-            <a href="pdfs/science.pdf" target="_blank">Open PDF</a>
-        </div>
-    </div>
-</section>
-
+    <h3> Science/Space Idea</h3>
+    <button onclick="openModal()" 
+        style="padding:10px 20px; background:#00c6ff; border:none; border-radius:5px; cursor:pointer;">
+        View PDFs
+    </button>
+</div>
+    <h3>Historical Idea</h3>
+    <button onclick="openModal()" 
+        style="padding:10px 20px; background:#00c6ff; border:none; border-radius:5px; cursor:pointer;">
+        View PDFs
+    </button>
+</div>
 
 <!-- About -->
 <section id="about">
@@ -187,7 +189,37 @@ footer a:hover {
     <h2>🔴 Live GitHub Updates</h2>
     <p>Latest project updates will appear here.</p>
 </section>
+<!-- Modal -->
+<div id="pdfModal" style="display:none; position:fixed; top:0; left:0; 
+width:100%; height:100%; background:rgba(0,0,0,0.8); 
+justify-content:center; align-items:center;">
 
+    <div style="background:#1b263b; padding:30px; border-radius:10px; 
+    width:300px; text-align:center; box-shadow:0 0 15px #00c6ff;">
+
+        <h3>Select Historical PDF</h3>
+
+        <p><a href="pdfs/history1.pdf" target="_blank">Historical Idea 1</a></p>
+        <p><a href="pdfs/history2.pdf" target="_blank">Historical Idea 2</a></p>
+        <p><a href="pdfs/history3.pdf" target="_blank">Historical Idea 3</a></p>
+
+        <button onclick="closeModal()" 
+        style="margin-top:15px; padding:5px 15px; background:red; border:none; color:white;">
+        Close
+        </button>
+
+    </div>
+</div>
+
+<script>
+function openModal() {
+    document.getElementById("pdfModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("pdfModal").style.display = "none";
+}
+</script>
 <!-- Footer -->
 <footer>
     <h2>Contact Me</h2>
