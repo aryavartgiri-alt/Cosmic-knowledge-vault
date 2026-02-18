@@ -175,6 +175,25 @@ footer a:hover {
     font-size: 18px;
     opacity: 0.9;
 }
+#contact {
+  text-align: center;
+  padding: 40px;
+}
+
+#contact input, 
+#contact textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#contact button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
 }
 </style>
 </head>
@@ -292,6 +311,19 @@ function closeModal() {
     document.getElementById("pdfModal").style.display = "none";
 }
 </script>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <!-- Paste 100forms code here -->
+<form action="https://submit.100forms.com/your-id" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message"></textarea>
+  <button type="submit">Send</button>
+</form>
+
+</section>
 <!-- Footer -->
 <footer>
     <h2>Contact Me</h2>
