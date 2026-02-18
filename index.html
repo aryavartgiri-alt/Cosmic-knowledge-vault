@@ -351,7 +351,9 @@ function closeModal() {
 }
 </script>
 <section id="subscribe">
-<h2>Subscribe for Updates</h2><form method="post" action="//submit.form" onSubmit="return validateForm();">
+<h2>Subscribe for Updates</h2>
+<div class="subscribe-box">
+<form method="post" action="//submit.form" onSubmit="return validateForm();">
 <div style="max-width: 400px;">
 </div>
 <div style="padding-bottom: 18px;">Email<br/>
@@ -379,7 +381,8 @@ function validateEmail(email) {
 var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
 return isEmpty(email) || re.test(email);
 }
-</script>
+</script></div>
+
 
 <!-- Paste your 100forms code here -->
 
