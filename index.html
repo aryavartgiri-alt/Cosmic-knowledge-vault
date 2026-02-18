@@ -177,60 +177,48 @@ footer a:hover {
 }
 <head>
 <title>My Portfolio</title>
+#subscribe {
+    text-align: center;
+    padding: 60px 20px;
+}
 
-<style>
-/* Subscribe Form Styling */
-form {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 35px;
+.subscribe-box {
+    background: rgba(255,255,255,0.05);
+    padding: 40px;
     border-radius: 15px;
     width: 90%;
-    max-width: 450px;
-    margin: 40px auto;
-    text-align: left;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(255,0,0,0.3);
 }
 
-/* Labels */
-form div {
-    font-size: 15px;
-    color: #ffffff;
+.subscribe-box input[type="text"] {
+    width: 100% !important;
+    padding: 12px !important;
+    margin: 12px 0 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    background: rgba(255,255,255,0.1) !important;
+    color: white !important;
 }
 
-/* Input Fields */
-form input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 14px;
-}
-
-/* Submit Button */
-form input[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(45deg, red, darkred);
-    color: white;
-    font-size: 16px;
+.subscribe-box input[type="submit"] {
+    width: 100% !important;
+    padding: 12px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    background: linear-gradient(45deg, red, darkred) !important;
+    color: white !important;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
-/* Hover Effect */
-form input[type="submit"]:hover {
+.subscribe-box input[type="submit"]:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px red;
 }
-</style>
+
 
 </head>
 }
