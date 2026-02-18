@@ -175,7 +175,64 @@ footer a:hover {
     font-size: 18px;
     opacity: 0.9;
 }
+<head>
+<title>My Portfolio</title>
 
+<style>
+/* Subscribe Form Styling */
+form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 35px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    margin: 40px auto;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+/* Labels */
+form div {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+/* Input Fields */
+form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, red, darkred);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+form input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px red;
+}
+</style>
+
+</head>
 }
 </style>
 </head>
@@ -293,6 +350,40 @@ function closeModal() {
     document.getElementById("pdfModal").style.display = "none";
 }
 </script>
+<section id="subscribe">
+<h2>Subscribe for Updates</h2><form method="post" action="//submit.form" onSubmit="return validateForm();">
+<div style="max-width: 400px;">
+</div>
+<div style="padding-bottom: 18px;">Email<br/>
+<input type="text" id="data_2" name="data_2" style="max-width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;">Name<br/>
+<input type="text" id="data_3" name="data_3" style="max-width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
+<div>
+<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+<script src="https://www.100forms.com/js/FORMKEY:L6AE5H9K9BMX" type="text/javascript"></script>
+</div>
+</form>
+<script type="text/javascript">
+function validateForm() {
+if (!validateEmail(document.getElementById('data_2').value.trim())) {
+alert('Email must be a valid email address!');
+return false;
+}
+return true;
+}
+function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+function validateEmail(email) {
+var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+return isEmpty(email) || re.test(email);
+}
+</script>
+
+<!-- Paste your 100forms code here -->
+
+</section>
 
 <!-- Footer -->
 <footer>
