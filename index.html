@@ -219,7 +219,30 @@ footer a:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px red;
 }
+.category-card {
+  display: block;
+  text-decoration: none;
+  background: rgba(20, 30, 50, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 15px #00f2ff;
+  transition: 0.3s ease-in-out;
+  color: white;
+}
 
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #00f2ff;
+}
+
+.category-card h2 {
+  color: #00eaff;
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  opacity: 0.8;
+}
 
 }
 </style>
@@ -237,51 +260,31 @@ footer a:hover {
             <a href="#about">About</a>
             <a href="#updates">Live Updates</a>
         </div>
-    </div>
+<section class="category-section">
+
+  <a href="electronics.html" class="category-card">
+    <h2>⚡ Electronic Notes</h2>
+    <p>Explore all electronics PDFs and resources</p>
+  </a>
+
+  <a href="space.html" class="category-card">
+    <h2>🌌 Science / Space Ideas</h2>
+    <p>Discover cosmic theories and science concepts</p>
+  </a>
+
+  <a href="history.html" class="category-card">
+    <h2>🏛 Historical Ideas</h2>
+    <p>Read historical knowledge and classical ideas</p>
+  </a>
+
+</section>   
 </div><section class="top-banner">
     <h1>🚀 Cosmic Knowledge Vault</h1>
     <p>Exploring Science, Space & Historical Ideas</p>
 </section>
 
 <!-- Home -->
-<section id="home">
-    <h1>Mission Wormholes 🔥</h1>
-    <p>Welcome to my Science & Technology Education Hub</p>
 
-
-    <div class="pdf-card">
-    <h3>Electronic Note</h3><div class="pdf-list">
-<a href="PDFs/Historical%20Idea/analog1.pdf" target="_blank">
-📘 Analog Electronics
-</a>
-        <a href="PDFs/Historical%20Idea/digital1.pdf" target="_blank">
-  📗 Digital Electronics
-</a>
-    </div>
-    </div>
-        <div class="pdf-card">
-    <h3>Science / Space Idea</h3>
-<div class="pdf-list">
-<a href="PDFs/Historical%20Idea/galaxy1.pdf" target="_blank">
- 🌌 Galaxy Formation
-</a>
-        <a href="PDFs/Historical%20Idea/wormhole1.pdf" target="_blank">
-  🌀 Wormhole Theory
-</a>
-    </div>
-    
-    <div class="pdf-card">
-    <h3>Historical Idea</h3>
-
-    <div class="pdf-list">
-<a href="PDFs/Historical%20Idea/idea1.pdf" target="_blank">
-   MY INDIA- SWAMI VIVEKANANDA JI
-</a>
-        <a href="PDFs/Historical%20Idea/idea2.pdf" target="_blank">
-   Classical Science 🔭
-</a>
-    </div>
-</div>
 
 <!-- About -->
 <section id="about">
