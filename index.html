@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryavart Book Store</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+.search-box {
+    text-align: center;
+    margin: 20px;
+}
+
+.search-box input {
+    width: 60%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.section {
+    padding: 40px 20px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s;
+    backdrop-filter: blur(10px);
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-card img {
+    width: 120px;
+    height: 160px;
+    margin-bottom: 10px;
+}
+
+.book-card button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background: #38bdf8;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f172a;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📚 Aryavart Digital Library</h1>
+    <p>Electronics | Space & Science | History</p>
+</header>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search books..." onkeyup="searchBooks()">
+</div>
+
+<!-- Electronics Section -->
+<div class="section">
+    <h2>📘 Electronics</h2>
+    <div class="book-grid">
+
+        <div class="book-card">
+            <img src="https://via.placeholder.com/120x160">
+            <h3>Basic Electronics</h3>
+            <button onclick="openPDF('electronics1.pdf')">Read PDF</button>
+        </div>
+
+        <div class="book-card">
+            <img src="https://via.placeholder.com/120x160">
+            <h3>Digital Circuits</h3>
+            <button onclick="openPDF('electronics2.pdf')">Read PDF</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- Space Section -->
+<div class="section">
+    <h2>🚀 Space & Science</h2>
+    <div class="book-grid">
+
+        <div class="book-card">
+            <img src="https://via.placeholder.com/120x160">
+            <h3>Journey to Mars</h3>
+            <button onclick="openPDF('space1.pdf')">Read PDF</button>
+        </div>
+
+        <div class="book-card">
+            <img src="https://via.placeholder.com/120x160">
+            <h3>Modern Physics</h3>
+            <button onclick="openPDF('space2.pdf')">Read PDF</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- History Section -->
+<div class="section">
+    <h2>📜 Historical Books</h2>
+    <div class="book-grid">
+
+        <div class="book-card">
+            <img src="https://via.placeholder.com/120x160">
+            <h3>Ancient India</h3>
+            <button onclick="openPDF('history1.pdf')">Read PDF</button>
+        </div>
+
+        <div class="book-card">
+            <img src="https://via.placeholder.com/120x160">
+            <h3>World War History</h3>
+            <button onclick="openPDF('history2.pdf')">Read PDF</button>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Aryavart Digital Library
+</footer>
+
+<script>
+function openPDF(file) {
+    window.open(file, '_blank');
+}
+
+function searchBooks() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.querySelectorAll('.book-card');
+
+    cards.forEach(card => {
+        let title = card.querySelector('h3').innerText.toLowerCase();
+        if (title.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+  </html>
