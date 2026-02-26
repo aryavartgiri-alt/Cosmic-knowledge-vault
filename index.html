@@ -95,6 +95,82 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
+    }html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    overflow-x: hidden;
+}
+
+.section {
+    padding: 80px 8%;
+}
+
+.section h2 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+.book-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.book-card img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.book-card h3 {
+    color: white;
+    margin: 15px 0;
+}
+
+.book-card button {
+    background: #4fc3f7;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.book-card button:hover {
+    background: #29b6f6;
+}
+
+/* Scrollbar Style */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1b2a49;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4fc3f7;
+    border-radius: 10px;
     }
 }
 }
@@ -113,61 +189,81 @@ footer {
 </div>
 
 <!-- Electronics Section -->
-<div class="section" id="📘 Electronics">
-    <h2 class="section-title">📘 Electronics</h2>
+<div class="section" id="electronics">
+    <h2>📘 Electronics</h2>
     <div class="book-grid">
 
         <div class="book-card">
-             <img src="images/basic-electronics.jpg" alt="Basic Electronics">
+            <img src="images/basic-electronics.jpg">
             <h3>Basic Electronics</h3>
             <button onclick="openPDF('electronics1.pdf')">Read PDF</button>
         </div>
 
         <div class="book-card">
-            <img src="images/digital-circuits.jpg" alt="Digital Circuits">
+            <img src="images/digital-circuits.jpg">
             <h3>Digital Circuits</h3>
             <button onclick="openPDF('electronics2.pdf')">Read PDF</button>
         </div>
 
+        <!-- Add More Books Here -->
+
     </div>
 </div>
 
+
 <!-- Space Section -->
-<div class="section" id="Space & Science">
+<div class="section" id="space">
     <h2>🚀 Space & Science</h2>
     <div class="book-grid">
 
         <div class="book-card">
-            <img src="images/mars.jpg" alt="Journey to Mars">
+            <img src="images/mars.jpg">
             <h3>Journey to Mars</h3>
             <button onclick="openPDF('space1.pdf')">Read PDF</button>
         </div>
 
         <div class="book-card">
-            <img src="images/physics.jpg" alt="Modern Physics">
+            <img src="images/physics.jpg">
             <h3>Modern Physics</h3>
             <button onclick="openPDF('space2.pdf')">Read PDF</button>
         </div>
 
+        <!-- Add More Books Here -->
+
     </div>
 </div>
 
-<!-- History Section -->
-<div class="section" id="📜 Historical Books">
+
+<!-- Historical Section -->
+<div class="section" id="history">
     <h2>📜 Historical Books</h2>
     <div class="book-grid">
 
         <div class="book-card">
-            <img src="images/ancient-india.jpg" alt="Ancient India">
+            <img src="images/ancient-india.jpg">
             <h3>Ancient India</h3>
             <button onclick="openPDF('history1.pdf')">Read PDF</button>
         </div>
 
         <div class="book-card">
-            <img src="images/world-war.jpg" alt="World War History">
+            <img src="images/world-war.jpg">
             <h3>World War History</h3>
             <button onclick="openPDF('history2.pdf')">Read PDF</button>
         </div>
+
+        <!-- Add Unlimited Books Below -->
+        <!-- Just copy this block -->
+
+        <!--
+        <div class="book-card">
+            <img src="images/new-book.jpg">
+            <h3>New History Book</h3>
+            <button onclick="openPDF('history3.pdf')">Read PDF</button>
+        </div>
+        -->
+
+    </div>
+</div>
 
     </div>
 </div>
@@ -195,6 +291,11 @@ function searchBooks() {
     });
 }
 </script>
-
+<script>
+function openPDF(file) {
+    window.open(file, '_blank');
+}
+</script>
+</body>
 </body>
   </html>
