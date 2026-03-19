@@ -1,18 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- 3 dots section -->
+<div class="menu-container">
+  <button class="menu-btn">⋮</button>
+  
+  <div class="menu-content" id="menu">
+    <a href="https://your-second-website.com" target="_blank">Visit My Second Site</a>
+  </div>
+</div>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aryavart Book Store</title>
 
 <style>
+
 body {
+
+
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #0f172a, #1e3a8a);
     color: white;
+
+
+
+}
+.menu-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #1e2a4a;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 180px;
+}
+
+.menu-content a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+}
+
+.menu-content a:hover {
+  background: #2f3d6b;
+}
 header {
     text-align: center;
     padding: 30px;
