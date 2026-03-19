@@ -4,12 +4,24 @@
 
 <!-- 3 dots section -->
 <div class="menu-container">
-  <button class="menu-btn">⋮</button>
-  
+  <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+
   <div class="menu-content" id="menu">
-    <a href="https://aryavartgiri-alt.github.io/Coaching-centre-/" target="_blank">Coaching centre</a>
+    <a href="https://your-second-website.com" target="_blank">
+      Visit My Second Site
+    </a>
   </div>
-</div>
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
